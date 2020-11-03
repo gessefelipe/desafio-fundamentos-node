@@ -18,7 +18,7 @@ class CreateTransactionService {
       const { total } = this.transactionsRepository.getBalance();
 
       if (total - value < 0) {
-        throw Error('Saldo insuficiente');
+        throw new Error('You do not have enough balance');
       }
     }
 
